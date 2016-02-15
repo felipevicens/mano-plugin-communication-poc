@@ -7,39 +7,39 @@ rabbitmq:
    - "25672:25672"
 
 sonpluginmanager:
-  image: kernelpoc
-  entrypoint : /bin/bash /home/dev/entrypoint.sh kernelpoc.sonpluginmanager 5
+  image: fjvicens/kernelpoc
+  entrypoint : /bin/bash /home/dev/entrypoint.sh fjvicens/kernelpoc.sonpluginmanager 5
   links:
    - rabbitmq
   restart: always
 
 pluginsonlog:
-  image: kernelpoc
-  entrypoint : /bin/bash /home/dev/entrypoint.sh kernelpoc.sonlog 6
+  image: fjvicens/kernelpoc
+  entrypoint : /bin/bash /home/dev/entrypoint.sh fjvicens/kernelpoc.sonlog 6
   links:
    - rabbitmq
 
 pluginsonplacement:
-  image: kernelpoc
-  entrypoint : /bin/bash /home/dev/entrypoint.sh kernelpoc.sonplacement 7
+  image: fjvicens/kernelpoc
+  entrypoint : /bin/bash /home/dev/entrypoint.sh fjvicens/kernelpoc.sonplacement 7
   links:
    - rabbitmq
 
 pluginsonconflict:
-  image: kernelpoc
-  entrypoint : /bin/bash /home/dev/entrypoint.sh kernelpoc.sonconflict 8
+  image: fjvicens/kernelpoc
+  entrypoint : /bin/bash /home/dev/entrypoint.sh fjvicens/kernelpoc.sonconflict 8
   links:
    - rabbitmq
 
 pluginsonsonlifecycle:
-  image: kernelpoc
-  entrypoint : /bin/bash /home/dev/entrypoint.sh kernelpoc.sonlifecycle 9
+  image: fjvicens/kernelpoc
+  entrypoint : /bin/bash /home/dev/entrypoint.sh fjvicens/kernelpoc.sonlifecycle 9
   links:
    - rabbitmq
 
 plugin1:
-  image: kernelpoc
-  entrypoint : /bin/bash /home/dev/entrypoint.sh kernelpoc.plugin1 15
+  image: fjvicens/kernelpoc
+  entrypoint : /bin/bash /home/dev/entrypoint.sh fjvicens/kernelpoc.plugin1 15
   links:
    - rabbitmq
   restart: always
