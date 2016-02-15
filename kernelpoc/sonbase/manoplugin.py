@@ -11,7 +11,7 @@ import threading
 import json
 logging.getLogger('pika').setLevel(logging.ERROR)
 
-RABBITMQ_HOST = "localhost"
+RABBITMQ_HOST = "rabbitmq"
 RABBITMQ_EXCHANGE = "son-kernel"
 
 
